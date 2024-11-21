@@ -39,6 +39,11 @@ export default function App() {
           setIsLoading(false);
         }
       }
+
+      if (!query.length) {
+        setMovies([]);
+        setError("");
+      }
       fetchMovies();
     },
     [query]
