@@ -1,4 +1,6 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 const containerStyle = {
   display: "flex",
   alignItems: "center",
@@ -7,6 +9,16 @@ const containerStyle = {
 
 const starContainerStyle = {
   display: "flex",
+};
+// prop types below insted of Typescript
+StarRating.propTypes = {
+  maxRating: PropTypes.number.isRequired,
+  size: PropTypes.number,
+  defaultRating: PropTypes.number,
+  color: PropTypes.string,
+  messages: PropTypes.array,
+  className: PropTypes.string,
+  onSetRating: PropTypes.func,
 };
 
 // maxRating = 5 is default props just in case parent does not declare maxRating
